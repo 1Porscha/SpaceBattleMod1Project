@@ -1,0 +1,58 @@
+html { 
+    background: url(spaceimage1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+
+body{
+  color: whitesmoke
+}
+
+.ussship{
+ height: 100px;
+ position: absolute;
+ left: 10px;
+ top: 110px; 
+ 
+}
+
+.enemy1{
+  height: 100px;
+  position: absolute;
+  right: 750px;
+  top: 7px
+}
+
+.enemy2{
+  height: 100px;
+  position: absolute;
+  right: 400px;
+  top: 7px
+}
+.enemy3{
+ height: 100px;
+ position: absolute;
+ right: 50px;
+ top: 7px
+}
+.enemy4{
+ height: 100px;
+ position: absolute;
+ right: 750px;
+ bottom: 190px
+}
+.enemy5{
+  height: 100px;
+  position: absolute;
+  right: 400px;
+  bottom: 190px
+}
+.enemy6{
+  height: 100px;
+  position: absolute;
+  right: 50px;
+  bottom: 190px
+}
