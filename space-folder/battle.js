@@ -83,7 +83,6 @@ while(ussHelloWorld.hull <= 0)
 if (Math.random() < ussHelloWorld.accuracy) {
    return fleet[i].hull-= ussHelloWorld.firepower
     alienHulls[i].textContent =`hull: ${borgAlien[i].hull}`
-    console.log("You have been hit!");
     
 }
 if(fleet[i].hull <= 0){
@@ -97,7 +96,6 @@ if(fleet[i].hull <= 0){
 // - repeat attack loop
 
 if(fleet[i].hull <= 1){
-    console.log("I've attacked your army")
     break
 }
 
@@ -109,13 +107,13 @@ while(fleet[i].hull <= 1)
 if (Math.random() < fleet[i].accuracy) {
     ussHelloWorld.hull-= fleet[i].firepower
     ussHull.textContent = `hull: ${ussHelloWorld.hull}`
-    console.log("Yes, I've been hit, but I hit harder");
 }
 if(ussHelloWorld.hull <= 1){
     break   
     
 }    
 
+while(ussHelloWorld.hull <=1)
  // we attack enemy ship again
  // attack order of event
  // check accuracy
@@ -135,7 +133,6 @@ if(ussHelloWorld.hull <= 1){
 }
 }
 playGame()
-console.log(playGame)
 console.log(borgAlien)
 console.log(ussHelloWorld)
 
