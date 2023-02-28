@@ -70,71 +70,31 @@ if(ussHelloWorld.hull <= 0){
     break
 }
 
-while(ussHelloWorld.hull <= 0)
-{
+//uss is alive, do turns between uss ship and alien ship
+while(ussHelloWorld.hull >= 0){
 
-}
-// 2. do attack loop
-// - we attack enemy ship
-// attack order of event
-// check accuracy
-// subtract damage
-// change ship of hhtml 
-if (Math.random() < ussHelloWorld.accuracy) {
-   return fleet[i].hull-= ussHelloWorld.firepower
-    alienHulls[i].textContent =`hull: ${borgAlien[i].hull}`
-    
-}
-if(fleet[i].hull <= 0){
-    break
-}
-// - check if enemy ship hull <= 1
-//      a. if yes break
-// - ship attacks us
-// check if our hull <= 1
-//      a. if yes break
-// - repeat attack loop
+    if (Math.random() < ussHelloWorld.accuracy) {
+        
+         fleet[i].hull-= ussHelloWorld.firepower
+         alienHulls[i].textContent =`hull: ${fleet[i].hull}`
+         
 
-if(fleet[i].hull <= 1){
-    break
+     }
+     if(fleet[i].hull <= 0){
+        break
+    }
+    //alien ship attacks
+    if (Math.random() < fleet[i].accuracy) {
+        ussHelloWorld.hull-= fleet[i].firepower
+        ussHull.textContent = `hull: ${ussHelloWorld.hull}`
+    }
 }
 
-while(fleet[i].hull <= 1)
-{
 
 }
 
-if (Math.random() < fleet[i].accuracy) {
-    ussHelloWorld.hull-= fleet[i].firepower
-    ussHull.textContent = `hull: ${ussHelloWorld.hull}`
-}
-if(ussHelloWorld.hull <= 1){
-    break   
-    
-}    
-
-while(ussHelloWorld.hull <=1)
- // we attack enemy ship again
- // attack order of event
- // check accuracy
- // subtract damage
- // change ship of hhtml 
- if (Math.random() < ussHelloWorld.accuracy) {
-    return fleet[i].hull-= ussHelloWorld.firepower
-     alienHulls[i].textContent =`hull: ${borgAlien[i].hull}`
-     console.log("You have been hit!");
- 
- }
- //if alien hull is set to zero, they have lost
- if(fleet[i].hull <= 0){
-    fleet[i].hull = 0
-    console.log("Good fight, but sorry you lost")
-     break
-}
-}
-playGame()
 console.log(borgAlien)
 console.log(ussHelloWorld)
-
-
 }
+
+playGame()
